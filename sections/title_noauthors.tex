@@ -1,0 +1,24 @@
+%-----------------------------------------------------------
+%	TITLE SECTION - with authors
+%-----------------------------------------------------------
+
+% Article title
+  \title{\vspace{-15mm}\fontsize{21pt}{10pt}\selectfont\textbf{A
+      Hybrid Methodology for Infrastructure Resilience Measurement:
+      the Impact of Electric Power Distribution Failures using the
+      City of Austin and post-Maria Puerto Rico as Case Studies
+      \thanks{Draft manuscript. Please do not cite without the
+        authors' permission.}}}  
+
+% Today's date
+	\date{Submitted: \usvardate\today}
+
+\makeatletter
+\renewcommand{\@maketitle}{
+\newpage
+ \null
+ \vskip 2em%
+ \begin{center}%
+  {\LARGE \@title \par}%
+ \end{center}%
+ \par} \makeatother
