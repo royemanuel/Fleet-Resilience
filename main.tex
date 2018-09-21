@@ -37,7 +37,7 @@
 
 % Header from Page Three on: Edit below for left and right headers
 \lhead{}
-\rhead{Infrastructure Resilience}
+\rhead{Fleet Resilience}
 
 %--------------------------------------------------------%
 %	BEGIN DOCUMENT
@@ -129,129 +129,251 @@
 \pagebreak
 \section*{Figures}
 
-
-%figure 1
 \begin{figure}[h]
-\centerline{\includegraphics[width=6in]{figures/PuertoRicoMap.pdf}}
-\caption{Map of Puerto Rico's Energy Infrastructure}
-\label{f:PRMap}
+  \centering\includegraphics[width=\textwidth]{figures/ClassIII.png}
+  \caption{Resilience Framework Relationships Among Models}
+  \label{f:ResilienceFramework}
 \end{figure}
-\pagebreak
 
-%figure 2
+ 
 \begin{figure}[h]
-  \label{f:austinmap}
-  \includegraphics[width=3in]{figures/austinmap.png}
-  \caption{Map of Electricity Service for Travis County, Texas from \emph{http://austinenergy.com}}
+  \centering\includegraphics[width=\textwidth]{figures/Chi2-1.pdf}
+  \caption{Intertemporal Substitutability Algorithm Example: Define
+    the $\chi$ Matrix - The left portion of the figure defines
+    the $\chi$ matrix (Step 1). The first shortfall occurs at
+    $t=4$ (Step 2)}
+  \label{f:Chi2-1}
 \end{figure}
-\pagebreak
 
-%figure 3
+
 \begin{figure}[h]
-  \centerline{\includegraphics[width=6in]{figures/ClassIII.png}}
-  \caption{Generalized Hybrid Model from Shanthikumar1983}
-  \label{f:HybridModel}
+  \centering\includegraphics[width=\textwidth]{figures/Chi2-2.pdf}
+  \caption{Intertemporal Substitutability Algorithm Example: Transfer
+    the Closest Surplus and Assess - The available surplus is $\psi$
+    applied to $t=4$ using $j={-1}$ (Step 3)}
+  \label{f:Chi2-2}
 \end{figure}
-\pagebreak
 
 
-%\begin{figure}[h]
-%  \begin{center}
-%    \includegraphics[width=3in]{figures/performanceTrajectories}
-%  \end{center}
-%  \renewcommand{\baselinestretch}{1}
-%  \small\normalsize
-%  \begin{quote}
-%    \caption[Figure with caption indented]{Performance trajectories
-%      adapted from \cite{Ayyub2014}}
-%    \label{f:perfTraj}
-%  \end{quote}
-%\end{figure}
-
-
-%figure 4
 \begin{figure}[h]
-  \centerline{\includegraphics[width = 6in]{figures/AllCaseStudies.png}}
-  \label{f:CaseStudyMethodology}
-  \caption{Data flow through hybrid model for both case studies}
+  \centering\includegraphics[width=\textwidth]{figures/Chi2-3.pdf}
+  \caption{Intertemporal Substitutability Algorithm Example: Transfer
+    the Next Closest Surplus and Assess - The surplus from $t=3$ is
+    not enough to overcome the shortfall (Step 4), so this transfer
+    expends all surplus from $t=3$ (Step 4a), and the algorithm
+    transfers surplus one step further from $t=4$ (Step 3)}
+  \label{f:Chi2-3}
 \end{figure}
-\pagebreak
 
-%figure 5
+
+(Figure~\ref{f:Chi2-4})
 \begin{figure}[h]
-  \label{f:Maria}
-  \includegraphics[width = 6in]{figures/maria}
-  \caption{The Peak Load and Customer Services Restored Values in the
-    Aftermath of Hurrican Maria in Puerto Rico}
+  \centering\includegraphics[width=\textwidth]{figures/Chi2-4.pdf}
+  \caption{Intertemporal Substitutability Algorithm Example: Find the
+    Next Shortfall and Begin Surplus Transfers - This transfer
+    satisfies the shortfall and leaves a fraction of the surplus at
+    $t=2$ remaining (Step5). With $t=4$ satisfied, the algorithm finds
+    the next shortfall at $t=5$. The first two steps have no surplus,
+    so the algorithm transfers surplus three steps from $t=5$. This
+    exhausts the surplus from $t=2$}
+  \label{f:Chi2-4}
 \end{figure}
-\pagebreak
-
-
-%figure 6
+(Figure~\ref{f:Chi2-5}). 
 \begin{figure}[h]
-  \label{f:TS_SingleStorm}
-  \includegraphics[width=6in]{figures/TimeSeriesSingle.png}
-  \caption{Time-series example for a Category 4 storm}
+  \centering\includegraphics[width=\textwidth]{figures/Chi2-5.pdf}
+  \caption{Intertemporal Substitutability Algorithm Example: Execute
+    the Final Available Transfer - The surplus from $t=1$ transfers to
+    $t=5$}
+  \label{f:Chi2-5}
 \end{figure}
-\pagebreak
 
-%figure 7
+
+
 \begin{figure}[h]
-  \label{f:SingleStorm}
-  \includegraphics{figures/SingleStormResilience.png}
-  \caption{Infrastructure resilience values for 1000 simulation runs}
+  \centering\includegraphics[width=\textwidth]{figures/Chi2-6.pdf}
+  \caption{Intertemporal Substitutability Algorithm Example: Modified
+    Functional Output with All Surpluses Exhausted - The shortfall at
+    $t=5$ cannot be overcome by available surplus, so the algorithm
+    ends with the modified functional output shown above.}
+  \label{f:Chi2-6}
 \end{figure}
-\pagebreak
 
-%figure 8
 \begin{figure}[h]
-  \label{f:SingleStrongestStorm}
-  \includegraphics{figures/singlestormstrength.png}
-  \caption{Infrastructure resilience values by hurricane category}
+  \centering\includegraphics[width=\textwidth]{figures/FleetHybridModelDetailedEmb}
+  \caption{Case Study Hybrid Resilience Framework}
+  \label{f:FleetFramework}
 \end{figure}
-\pagebreak
-% * <ba@umd.edu> 2018-04-30T16:56:12.696Z:
-% 
-% Figure 6 is unclear
-% What is "Strongest_Storm"
-% What are the 1, 2, 3, and 4?
-% 
-% What are * shown? Hurricane Maria circle?
-% 
-% ^.
 
-%figure 9
 \begin{figure}[h]
-  \label{f:exampleProfile}
-  \includegraphics[width=5in]{figures/exampleProfile.png}
-  \caption{An example of the figure of merit and endogenous preference
-    over time for a ten year time horizon}
+  \centering\includegraphics{figures\DESflow.png}
+  \caption{Squadron Fleet Operation Flow of Events}
+  \label{f:DESflow}
 \end{figure}
-\pagebreak
 
-%figure 10
 \begin{figure}[h]
-  \label{f:10yrRes}
-  \includegraphics{figures/10yrRes.png}
-  \caption{Resilience values for each time horizon and infrastructure pair}
+  \centering\includegraphics{figures\time_series_fleet_no_surge}
+  \caption{Simulation Output Example of Aircraft Data and Quarterly
+    Graduates for each SLEP Option without Surge in Students}
+  \label{f:ts_no_surge}
 \end{figure}
-\pagebreak
 
-%
+\begin{figure}[h]
+  \centering\includegraphics{figures\time_series_fleet_surge}
+  \caption{Simulation Output Example of Aircraft Data and Quarterly
+    Graduates for each SLEP Option without Surge in Students}
+  \label{f:ts_surge}
+\end{figure}
 
-%figure 10
-%\begin{figure}[h]
-%  \label{f:allAsis}
-%  \includegraphics[width=5in]{figures/allasisplot.png}
-%  \caption{Resilience for each infrastructure for each stakeholder
-%    profile} 
-% * <ba@umd.edu> 2018-04-30T16:58:22.646Z:
-% 
-% Figure 9
-% Spell out the terms/phrases on the abscissa (you may rotate the text counterclockwise if needed)
-% 
-% ^.
-%\end{figure}
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMAoPlotTimeHorizon15}
+  \caption{Program Manager Daily Ready Aircraft Resilience Results - 15 Year Time Horizon}
+  \label{f:PMresultsAo15}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMAoPlotTimeHorizon20}
+  \caption{Program Manager Daily Ready Aircraft Resilience Results - 15 Year Time Horizon}
+  \label{f:PMresultsAo20}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMAoPlotTimeHorizon25}
+  \caption{Program Manager Daily Ready Aircraft Resilience Results - 25 Year Time Horizon}
+  \label{f:PMresultsAo25}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMAoPlotTimeHorizon30}
+  \caption{Program Manager Daily Ready Aircraft Resilience Results - 15 Year Time Horizon}
+  \label{f:PMresultsAo30}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMAoPlotTimeHorizon35}
+  \caption{Program Manager Daily Ready Aircraft Resilience Results - 35 Year Time Horizon}
+  \label{f:PMresultsAo35}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradPlotTimeHorizon15}
+  \caption{Program Manager Graduates per Quarter Resilience Results - 15 Year Time Horizon - 15 Year Time Horizon}
+  \label{f:PMresultsGrad15}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradPlotTimeHorizon20}
+  \caption{Program Manager Graduates per Quarter Resilience Results - 15 Year Time Horizon - 15 Year Time Horizon}
+  \label{f:PMresultsGrad20}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradPlotTimeHorizon25}
+  \caption{Program Manager Graduates per Quarter Resilience Results - 25 Year Time Horizon}
+  \label{f:PMresultsGrad25}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradPlotTimeHorizon30}
+  \caption{Program Manager Graduates per Quarter Resilience Results - 15 Year Time Horizon - 15 Year Time Horizon}
+  \label{f:PMresultsGrad30}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradPlotTimeHorizon35}
+  \caption{Program Manager Graduates per Quarter Resilience Results - 35 Year Time Horizon}
+  \label{f:PMresultsGrad35}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMSatPlotTimeHorizon15}
+  \caption{Program Manager Student Satisfaction Resilience Results - 15 Year Time Horizon}
+  \label{f:PMresultsSat15}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMSatPlotTimeHorizon20}
+  \caption{Program Manager Student Satisfaction Resilience Results - 15 Year Time Horizon}
+  \label{f:PMresultsSat20}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMSatPlotTimeHorizon25}
+  \caption{Program Manager Student Satisfaction Resilience Results - 25 Year Time Horizon}
+  \label{f:PMresultsSat25}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMSatPlotTimeHorizon30}
+  \caption{Program Manager Student Satisfaction Resilience Results - 15 Year Time Horizon}
+  \label{f:PMresultsSat30}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMSatPlotTimeHorizon35}
+  \caption{Program Manager Student Satisfaction Resilience Results - 35 Year Time Horizon}
+  \label{f:PMresultsSat35}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\CO_Sat}
+  \caption{Squadron Commander Student Satisfaction Resilience Results}
+  \label{f:CO_Sat}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\CO_Grad}
+  \caption{Squadron Commander Graduates per Quarter Resilience
+    Results($\chi$ = 0)}
+  \label{f:CO_Grad}
+\end{figure}
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradAllChiPlotTimeHorizon15}
+  \caption{Program Manager Graduates per Quarter Resilience Results  - 15 Year Time Horizon}
+  \label{f:PMresultsGradAllChi15}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradAllChiPlotTimeHorizon20}
+  \caption{Program Manager Graduates per Quarter Resilience Results  - 20 Year Time Horizon}
+  \label{f:PMresultsGradAllChi20}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradAllChiPlotTimeHorizon25}
+  \caption{Program Manager Graduates per Quarter Resilience Results - 25 Year Time Horizon}
+  \label{f:PMresultsGradAllChi25}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradAllChiPlotTimeHorizon30}
+  \caption{Program Manager Graduates per Quarter Resilience Results  - 30 Year Time Horizon}
+  \label{f:PMresultsGradAllChi30}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\PMGradAllChiPlotTimeHorizon35}
+  \caption{Program Manager Graduates per Quarter Resilience Results - 35 Year Time Horizon}
+  \label{f:PMresultsGradAllChi35}
+\end{figure}
+\begin{figure}[h]
+  \centering\includegraphics{figures\CDR_Delta_GradRes}
+  \caption{Commander Delta Graduate per Quarter Resilience Results for
+  Each Intertemporal Substitutability Profile}
+  \label{f:CO_D_Grad}
+\end{figure}
+
+\begin{figure}[h]
+  \centering\includegraphics{figures\CDR_Echo_GradRes}
+  \caption{Commander Echo Resilience Results for
+  Each Intertemporal Substitutability Profile}
+  \label{f:CO_E_Grad}
+\end{figure}
+
+
 
 %--------------------------------------------------------%
 %	TABLES
@@ -266,31 +388,6 @@
 
 %\input{tables/sample_longtable}
 
-\input{tables/S-O-S.tex}
-
-\pagebreak
-\input{tables/resParam.tex}
-
-\pagebreak
-\input{tables/Storms.tex}
-
-\pagebreak
-\input{tables/StormCharacteristics.tex}
-
-\pagebreak
-\input{tables/FailParameters.tex}
-
-\pagebreak
-\input{tables/spikeNeed.tex}
-
-\pagebreak
-\input{tables/nProfiles.tex}
-
-\pagebreak
-\input{tables/Resilience.tex}
-
-\pagebreak
-\input{tables/stormdata.tex}
 
 %\input{tables/sample_table}
 
