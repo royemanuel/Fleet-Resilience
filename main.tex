@@ -1,0 +1,318 @@
+%--------------------------------------------------------%
+  % Journal Article Manuscript Template
+
+%% Copyright 2014 Nicholas E. Reith.
+  
+  % This work may be distributed and/or modified under the
+  % conditions of the LaTeX Project Public License, 
+  % either version 1.3 of this license or (at your option) 
+  % any later version.
+  
+  % The latest version of this license is in
+  %   http://www.latex-project.org/lppl.txt
+  % and version 1.3 or later is part of all distributions of LaTeX
+  % version 2005/12/01 or later.
+  
+  % This work has the LPPL maintenance status `unmaintained'.
+  
+  % This work consists of the files main.tex and subsidiary files:
+  % (references: biblio.bib), (sections: content.tex, coverpage.tex,
+  % preamble.tex, title_authors.tex, and title_noauthors.tex), and
+  % (tables: sample_longtable.tex, and sample_table.tex).
+  
+  % It also includes the BibTeX reference styles: 
+  % asr.bst, and ajs.bst, borrowed from here:
+  % http://people.ku.edu/~chkim/
+
+%--------------------------------------------------------%
+
+
+%--------------------------------------------------------%
+%	This is the main .tex file, which controls and combines
+%	the other sections.
+%	See the "sections" folder to edit content
+%--------------------------------------------------------%
+
+\input{sections/preamble} % See preamble.tex to edit the overall layout
+
+% Header from Page Three on: Edit below for left and right headers
+\lhead{}
+\rhead{Infrastructure Resilience}
+
+%--------------------------------------------------------%
+%	BEGIN DOCUMENT
+%--------------------------------------------------------%
+
+\begin{document}
+
+%TC:ignore   %% This region is ignored for the word count
+% COVER PAGE
+
+\input{sections/coverpage} % Comment out to remove cover page
+%TC:endignore
+
+\thispagestyle{empty} % Removes header on page two. Only needed if there is a coverpage
+
+% TITLE SECTION
+
+% Comment out one of the two lines below to include or exclude authors in article title. You may want to exclude them in case of a double-blind peer review submission, since authors appear on the cover page, and reviewers should not see the authors' names in the manuscript draft.
+
+%\input{sections/title_authors}
+\input{sections/title_noauthors}
+
+\maketitle % Insert title
+% * <ba@umd.edu> 2018-04-30T14:39:04.308Z:
+% 
+% Change the title to match cover page:
+% A Hybrid Methodology for Infrastructure Resilience Measurement: the
+% Impact of Electric Power Distribution Failures using the City of Austin and post-Maria Puerto Rico as Case Studies
+% 
+% Should we add "Electric Power Distribution" in the title... perhaps..
+% 
+% Electric Power Distribution Infrastructure Resilience Measurement with Case Studies for the City of Austin and Puerto Rico 
+% 
+% 
+% ^.
+% NOTE: Comment out the lines below to remove line numbers
+  % Running line numbers:
+  \linenumbers
+% * <ba@umd.edu> 2018-04-30T14:39:39.273Z:
+%
+% ^.
+  \setlength\linenumbersep{15pt}
+  \renewcommand\linenumberfont{\normalfont\footnotesize\sffamily\color{gray}}
+  %\pagewiselinenumbers % Same, but that reset on every page:
+  \modulolinenumbers[1] % Number only every line. Change for fewer.
+
+%--------------------------------------------------------%
+%	CONTENT
+%--------------------------------------------------------%
+
+% See the content.tex file for the abstract and body text
+\input{sections/content}
+
+%--------------------------------------------------------%
+%	REFERENCE LIST
+%--------------------------------------------------------%
+\pagebreak
+\singlespacing
+
+% BIBTEX
+
+    % NOTE: Comment out next two lines if using biblatex
+    \bibliographystyle{references/ajs}
+	\bibliography{Mendeley} % Insert bibliography
+
+% BIBLATEX
+
+	% NOTE: Uncomment next line to use biblatex
+	% \printbibliography
+
+%--------------------------------------------------------%
+%	END NOTES
+%--------------------------------------------------------%
+
+	% Uncomment these three lines below if using endnotes
+    % instead of footnotes
+      % \pagebreak
+      % \section*{End Notes}
+      % \theendnotes
+
+%--------------------------------------------------------%
+%	FIGURES
+%--------------------------------------------------------%
+
+% NOTE: If your submission guidelines don't require figures
+% at the end, you can comment out the two lines below,
+% and embed figures in the text of content.tex instead of here
+
+\pagebreak
+\section*{Figures}
+
+
+%figure 1
+\begin{figure}[h]
+\centerline{\includegraphics[width=6in]{figures/PuertoRicoMap.pdf}}
+\caption{Map of Puerto Rico's Energy Infrastructure}
+\label{f:PRMap}
+\end{figure}
+\pagebreak
+
+%figure 2
+\begin{figure}[h]
+  \label{f:austinmap}
+  \includegraphics[width=3in]{figures/austinmap.png}
+  \caption{Map of Electricity Service for Travis County, Texas from \emph{http://austinenergy.com}}
+\end{figure}
+\pagebreak
+
+%figure 3
+\begin{figure}[h]
+  \centerline{\includegraphics[width=6in]{figures/ClassIII.png}}
+  \caption{Generalized Hybrid Model from Shanthikumar1983}
+  \label{f:HybridModel}
+\end{figure}
+\pagebreak
+
+
+%\begin{figure}[h]
+%  \begin{center}
+%    \includegraphics[width=3in]{figures/performanceTrajectories}
+%  \end{center}
+%  \renewcommand{\baselinestretch}{1}
+%  \small\normalsize
+%  \begin{quote}
+%    \caption[Figure with caption indented]{Performance trajectories
+%      adapted from \cite{Ayyub2014}}
+%    \label{f:perfTraj}
+%  \end{quote}
+%\end{figure}
+
+
+%figure 4
+\begin{figure}[h]
+  \centerline{\includegraphics[width = 6in]{figures/AllCaseStudies.png}}
+  \label{f:CaseStudyMethodology}
+  \caption{Data flow through hybrid model for both case studies}
+\end{figure}
+\pagebreak
+
+%figure 5
+\begin{figure}[h]
+  \label{f:Maria}
+  \includegraphics[width = 6in]{figures/maria}
+  \caption{The Peak Load and Customer Services Restored Values in the
+    Aftermath of Hurrican Maria in Puerto Rico}
+\end{figure}
+\pagebreak
+
+
+%figure 6
+\begin{figure}[h]
+  \label{f:TS_SingleStorm}
+  \includegraphics[width=6in]{figures/TimeSeriesSingle.png}
+  \caption{Time-series example for a Category 4 storm}
+\end{figure}
+\pagebreak
+
+%figure 7
+\begin{figure}[h]
+  \label{f:SingleStorm}
+  \includegraphics{figures/SingleStormResilience.png}
+  \caption{Infrastructure resilience values for 1000 simulation runs}
+\end{figure}
+\pagebreak
+
+%figure 8
+\begin{figure}[h]
+  \label{f:SingleStrongestStorm}
+  \includegraphics{figures/singlestormstrength.png}
+  \caption{Infrastructure resilience values by hurricane category}
+\end{figure}
+\pagebreak
+% * <ba@umd.edu> 2018-04-30T16:56:12.696Z:
+% 
+% Figure 6 is unclear
+% What is "Strongest_Storm"
+% What are the 1, 2, 3, and 4?
+% 
+% What are * shown? Hurricane Maria circle?
+% 
+% ^.
+
+%figure 9
+\begin{figure}[h]
+  \label{f:exampleProfile}
+  \includegraphics[width=5in]{figures/exampleProfile.png}
+  \caption{An example of the figure of merit and endogenous preference
+    over time for a ten year time horizon}
+\end{figure}
+\pagebreak
+
+%figure 10
+\begin{figure}[h]
+  \label{f:10yrRes}
+  \includegraphics{figures/10yrRes.png}
+  \caption{Resilience values for each time horizon and infrastructure pair}
+\end{figure}
+\pagebreak
+
+%
+
+%figure 10
+%\begin{figure}[h]
+%  \label{f:allAsis}
+%  \includegraphics[width=5in]{figures/allasisplot.png}
+%  \caption{Resilience for each infrastructure for each stakeholder
+%    profile} 
+% * <ba@umd.edu> 2018-04-30T16:58:22.646Z:
+% 
+% Figure 9
+% Spell out the terms/phrases on the abscissa (you may rotate the text counterclockwise if needed)
+% 
+% ^.
+%\end{figure}
+
+%--------------------------------------------------------%
+%	TABLES
+%--------------------------------------------------------%
+
+% NOTE: If your submission guidelines don't require tables
+% at the end, you can comment out the two lines below,
+% and embed tables in the text of content.tex instead of here
+
+\pagebreak
+\section*{Tables}
+
+%\input{tables/sample_longtable}
+
+\input{tables/S-O-S.tex}
+
+\pagebreak
+\input{tables/resParam.tex}
+
+\pagebreak
+\input{tables/Storms.tex}
+
+\pagebreak
+\input{tables/StormCharacteristics.tex}
+
+\pagebreak
+\input{tables/FailParameters.tex}
+
+\pagebreak
+\input{tables/spikeNeed.tex}
+
+\pagebreak
+\input{tables/nProfiles.tex}
+
+\pagebreak
+\input{tables/Resilience.tex}
+
+\pagebreak
+\input{tables/stormdata.tex}
+
+%\input{tables/sample_table}
+
+%--------------------------------------------------------%
+%	WORD COUNT
+%--------------------------------------------------------%
+
+% NOTE: Comment out this section, if you wish 
+% to remove this Word Count page.
+
+% NOTE: AJS wants no more than about 10,000 words total.
+
+%\newpage
+
+%TC:ignore  %% This region is ignored for the word count
+%\section*{Word Count}
+
+%This document contains approximately {\large \textbf{\wordcount}} before this page, including: title, authors, section headings, abstract, body text, tables, figure captions and references. It seems to ignore most \LaTeX \ code and \%comments, but it treats contractions such as "can't" as one word.
+%TC:endignore
+
+%--------------------------------------------------------%
+%	END DOCUMENT
+%--------------------------------------------------------%
+
+\end{document}
